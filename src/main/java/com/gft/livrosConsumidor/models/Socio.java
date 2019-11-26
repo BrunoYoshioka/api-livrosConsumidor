@@ -1,4 +1,4 @@
-package com.gft.livros.models;
+package com.gft.livrosConsumidor.models;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public class Socio implements Serializable {
 	private String rg;
 	private String cpf;
 	private String email;
-	private Emprestimo emprestimo; 
+	private Emprestimo emprestimo;
 	
 	public Socio() {
 	}

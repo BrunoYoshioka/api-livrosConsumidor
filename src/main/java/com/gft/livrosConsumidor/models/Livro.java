@@ -1,6 +1,6 @@
-package com.gft.livros.models;
+package com.gft.livrosConsumidor.models;
 
-import com.gft.livros.models.enums.Tipo;
+import com.gft.livrosConsumidor.models.enums.Tipo;
 
 import java.io.Serializable;
 import java.time.LocalDate;

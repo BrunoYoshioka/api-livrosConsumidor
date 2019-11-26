@@ -1,0 +1,22 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  mail:
+    host: smtp.mailtrap.io
+    port: 25
+    username: 5b364d518fe809
+    password: 223eefcc7834a5
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+server:
+  port: 8082

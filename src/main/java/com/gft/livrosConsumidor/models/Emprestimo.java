@@ -1,17 +1,27 @@
-package com.gft.livros.models;
+package com.gft.livrosConsumidor.models;
 
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import com.gft.livrosConsumidor.models.enums.Status;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import com.gft.livros.models.enums.Status;
-
 public class Emprestimo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Integer Id;
+
+	@JsonDeserialize(using = LocalDateDeserializer.class)
+	@JsonSerialize(using = LocalDateSerializer.class)
 	private LocalDate dataEmprestimo;
+
+	@JsonDeserialize(using = LocalDateDeserializer.class)
+	@JsonSerialize(using = LocalDateSerializer.class)
 	private LocalDate dataDevolucao;
 	private BigDecimal valorEmprestimo;
 	private BigDecimal valorMulta;
@@ -30,7 +40,7 @@ public class Emprestimo implements Serializable {
 
 	public Emprestimo () {
 	}
-	
+
 	public Integer getId() {
 		return Id;
 	}

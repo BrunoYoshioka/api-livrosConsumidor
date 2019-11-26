@@ -1,4 +1,4 @@
-package com.gft.livros.models;
+package com.gft.livrosConsumidor.models;
 
 import java.io.Serializable;
 import java.util.Objects;

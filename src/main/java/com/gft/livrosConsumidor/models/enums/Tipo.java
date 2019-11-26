@@ -1,14 +1,14 @@
-package com.gft.livros.models.enums;
+package com.gft.livrosConsumidor.models.enums;
 
-public enum Status {
-    NOPRAZO(1, "No Prazo"),
-    DEVOLVIDO(2, "Devolvido"),
-    ATRASADO(3, "Atrasado");
+public enum Tipo {
+    EBOOK(1, "E-book"),
+    CAPA_DURA(2, "Capa dura"),
+    CAPA_NORMAL(3, "Capa normal");
 
     private Integer id;
     private String descricao;
 
-    Status(Integer id, String descricao) {
+    Tipo(Integer id, String descricao) {
         this.id = id;
         this.descricao = descricao;
     }

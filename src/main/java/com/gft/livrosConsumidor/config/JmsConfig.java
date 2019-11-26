@@ -1,4 +1,4 @@
-package com.gft.livros.config;
+package com.gft.livrosConsumidor.config;
 
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;

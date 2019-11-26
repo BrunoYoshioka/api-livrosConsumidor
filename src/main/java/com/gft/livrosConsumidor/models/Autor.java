@@ -1,25 +1,28 @@
-package com.gft.livros.models;
+package com.gft.livrosConsumidor.models;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-public class Editora implements Serializable {
+public class Autor implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer id;
 
     private String nome;
 
+    private String descricao;
+
     private List<Livro> livros;
 
-    public Editora(Integer id, String nome, List<Livro> livros) {
+    public Autor(Integer id, String nome, String descricao, List<Livro> livros) {
         this.id = id;
         this.nome = nome;
+        this.descricao = descricao;
         this.livros = livros;
     }
 
-    public Editora() {
+    public Autor() {
     }
 
     public Integer getId() {
@@ -38,6 +41,14 @@ public class Editora implements Serializable {
         this.nome = nome;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public List<Livro> getLivros() {
         return livros;
     }
@@ -50,9 +61,9 @@ public class Editora implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Editora editora = (Editora) o;
-        return Objects.equals(id, editora.id) &&
-                Objects.equals(nome, editora.nome);
+        Autor autor = (Autor) o;
+        return Objects.equals(id, autor.id) &&
+                Objects.equals(nome, autor.nome);
     }
 
     @Override

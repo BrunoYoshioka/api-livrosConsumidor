@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <p>Olá <span th:text="${emprestimo.getSocio().getNome()}"></span><br/>
+        Solicito através deste e-mail a devolução dos livros do empréstimo realizado no dia <span th:text="${emprestimo.getDataEmprestimo()}"></span><br/>
+        com data de devolução prevista para o dia <span th:text="${emprestimo.getDataDevolucao()}"></span><br/>
+        com o valor de empréstimo de <span th:text="${emprestimo.getValorEmprestimo()}"></span><br/>
+        e o valor de multa pelo atraso da devolução de <span th:text="${emprestimo.getValorMulta()}"></span>
+    </p>
+</body>
+</html>
