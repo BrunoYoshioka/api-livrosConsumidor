@@ -27,7 +27,8 @@ public class EmprestimoService {
             Emprestimo emprestimoObj = mapper.readValue(emprestimo.getText(), Emprestimo.class);
             emprestimoObj.setValorMulta(emprestimoObj.getValorMulta().setScale(2, BigDecimal.ROUND_HALF_EVEN));
             String corpoEmail = emailUtils.corpoEmail(emprestimoObj);
-            emailUtils.sendEmail(corpoEmail, emprestimoObj);
+            String email = emprestimoObj.getSocio().getEmail();
+            emailUtils.sendEmail(corpoEmail, email);
         } catch (JMSException | JsonProcessingException | MessagingException e) {
             e.printStackTrace();
         }

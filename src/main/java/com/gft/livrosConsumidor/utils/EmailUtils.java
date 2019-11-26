@@ -25,11 +25,11 @@ public class EmailUtils {
         return templateEngine.process("emprestimoTemplate", context);
     }
 
-    public void sendEmail(String corpoEmail, Emprestimo emprestimoObj) throws MessagingException {
+    public void sendEmail(String corpoEmail, String email) throws MessagingException {
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
 
-        helper.setTo(emprestimoObj.getSocio().getEmail());
+        helper.setTo(email);
         helper.setText(corpoEmail, true);
         helper.setSubject("Devolução do empréstimo de livros");
         sender.send(message);
